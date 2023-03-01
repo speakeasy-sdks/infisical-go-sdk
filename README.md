@@ -22,17 +22,13 @@ import (
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuth: shared.SchemeBearerAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
+    s := sdk.New(sdk.WithSecurity(
+        shared.Security{
+            BearerAuth: shared.SchemeBearerAuth{
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
-        ),
-    }
-
-    s := sdk.New(opts...)
+        },
+    ))
     
     req := operations.GetWorkspaceKeysRequest{
         PathParams: operations.GetWorkspaceKeysPathParams{
