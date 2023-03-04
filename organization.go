@@ -56,6 +56,7 @@ func (s *organization) DeleteOrganizationMembership(ctx context.Context, request
 	res := &operations.DeleteOrganizationMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -120,6 +121,7 @@ func (s *organization) GetOrganizationMemberships(ctx context.Context, request o
 	res := &operations.GetOrganizationMembershipsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -184,6 +186,7 @@ func (s *organization) GetOrganizationWorkspaces(ctx context.Context, request op
 	res := &operations.GetOrganizationWorkspacesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -258,6 +261,7 @@ func (s *organization) UpdateOrganizationMembership(ctx context.Context, request
 	res := &operations.UpdateOrganizationMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

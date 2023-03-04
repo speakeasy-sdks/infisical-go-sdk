@@ -2,6 +2,7 @@ package operations
 
 import (
 	"github.com/speakeasy-sdks/infisical-go-sdk/pkg/models/shared"
+	"net/http"
 )
 
 type DeleteWorkspaceMembershipPathParams struct {
@@ -18,4 +19,5 @@ type DeleteWorkspaceMembershipResponse struct {
 	ErrorResponse *shared.ErrorResponse
 	Membership    *shared.Membership
 	StatusCode    int
+	RawResponse   *http.Response
 }

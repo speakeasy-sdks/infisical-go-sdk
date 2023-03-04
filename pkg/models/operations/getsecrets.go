@@ -2,6 +2,7 @@ package operations
 
 import (
 	"github.com/speakeasy-sdks/infisical-go-sdk/pkg/models/shared"
+	"net/http"
 )
 
 type GetSecretsRequestBody struct {
@@ -18,4 +19,5 @@ type GetSecretsResponse struct {
 	ContentType   string
 	ErrorResponse *shared.ErrorResponse
 	StatusCode    int
+	RawResponse   *http.Response
 }

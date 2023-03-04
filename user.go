@@ -57,6 +57,7 @@ func (s *user) MyOrganizations(ctx context.Context) (*operations.MyOrganizations
 	res := &operations.MyOrganizationsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -121,6 +122,7 @@ func (s *user) MyUser(ctx context.Context) (*operations.MyUserResponse, error) {
 	res := &operations.MyUserResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

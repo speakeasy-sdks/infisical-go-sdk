@@ -2,6 +2,7 @@ package operations
 
 import (
 	"github.com/speakeasy-sdks/infisical-go-sdk/pkg/models/shared"
+	"net/http"
 )
 
 type GetSecretVersionsPathParams struct {
@@ -23,4 +24,5 @@ type GetSecretVersionsResponse struct {
 	ErrorResponse  *shared.ErrorResponse
 	SecretVersions []shared.SecretVersion
 	StatusCode     int
+	RawResponse    *http.Response
 }

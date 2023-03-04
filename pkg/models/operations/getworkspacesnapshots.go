@@ -2,6 +2,7 @@ package operations
 
 import (
 	"github.com/speakeasy-sdks/infisical-go-sdk/pkg/models/shared"
+	"net/http"
 )
 
 type GetWorkspaceSnapshotsPathParams struct {
@@ -17,4 +18,5 @@ type GetWorkspaceSnapshotsResponse struct {
 	ErrorResponse *shared.ErrorResponse
 	Snapshots     []interface{}
 	StatusCode    int
+	RawResponse   *http.Response
 }

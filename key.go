@@ -56,6 +56,7 @@ func (s *key) GetWorkspaceKeys(ctx context.Context, request operations.GetWorksp
 	res := &operations.GetWorkspaceKeysResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

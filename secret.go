@@ -67,6 +67,7 @@ func (s *secret) CreateSecret(ctx context.Context, request operations.CreateSecr
 	res := &operations.CreateSecretResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -141,6 +142,7 @@ func (s *secret) DeleteSecrets(ctx context.Context, request operations.DeleteSec
 	res := &operations.DeleteSecretsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -209,6 +211,7 @@ func (s *secret) GetSecretVersions(ctx context.Context, request operations.GetSe
 	res := &operations.GetSecretVersionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -283,6 +286,7 @@ func (s *secret) GetSecrets(ctx context.Context, request operations.GetSecretsRe
 	res := &operations.GetSecretsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -348,6 +352,7 @@ func (s *secret) RollbackSecretVersions(ctx context.Context, request operations.
 	res := &operations.RollbackSecretVersionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -422,6 +427,7 @@ func (s *secret) UpdateSecrets(ctx context.Context, request operations.UpdateSec
 	res := &operations.UpdateSecretsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

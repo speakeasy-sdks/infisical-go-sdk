@@ -56,6 +56,7 @@ func (s *membership) DeleteOrganizationMembership(ctx context.Context, request o
 	res := &operations.DeleteOrganizationMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -120,6 +121,7 @@ func (s *membership) DeleteWorkspaceMembership(ctx context.Context, request oper
 	res := &operations.DeleteWorkspaceMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -184,6 +186,7 @@ func (s *membership) GetOrganizationMemberships(ctx context.Context, request ope
 	res := &operations.GetOrganizationMembershipsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -248,6 +251,7 @@ func (s *membership) GetWorkspaceMemberships(ctx context.Context, request operat
 	res := &operations.GetWorkspaceMembershipsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -322,6 +326,7 @@ func (s *membership) UpdateOrganizationMembership(ctx context.Context, request o
 	res := &operations.UpdateOrganizationMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -396,6 +401,7 @@ func (s *membership) UpdateWorkspaceMembership(ctx context.Context, request oper
 	res := &operations.UpdateWorkspaceMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

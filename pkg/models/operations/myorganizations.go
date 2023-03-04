@@ -2,6 +2,7 @@ package operations
 
 import (
 	"github.com/speakeasy-sdks/infisical-go-sdk/pkg/models/shared"
+	"net/http"
 )
 
 type MyOrganizationsResponse struct {
@@ -9,4 +10,5 @@ type MyOrganizationsResponse struct {
 	ErrorResponse *shared.ErrorResponse
 	Organizations []shared.Organization
 	StatusCode    int
+	RawResponse   *http.Response
 }

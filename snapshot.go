@@ -56,6 +56,7 @@ func (s *snapshot) GetWorkspaceSnapshots(ctx context.Context, request operations
 	res := &operations.GetWorkspaceSnapshotsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -130,6 +131,7 @@ func (s *snapshot) RollbackSnapshots(ctx context.Context, request operations.Rol
 	res := &operations.RollbackSnapshotsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

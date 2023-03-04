@@ -56,6 +56,7 @@ func (s *log) GetWorkspaceLogs(ctx context.Context, request operations.GetWorksp
 	res := &operations.GetWorkspaceLogsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:

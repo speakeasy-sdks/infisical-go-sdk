@@ -56,6 +56,7 @@ func (s *workspace) DeleteWorkspaceMembership(ctx context.Context, request opera
 	res := &operations.DeleteWorkspaceMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -120,6 +121,7 @@ func (s *workspace) GetOrganizationWorkspaces(ctx context.Context, request opera
 	res := &operations.GetOrganizationWorkspacesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -184,6 +186,7 @@ func (s *workspace) GetWorkspaceKeys(ctx context.Context, request operations.Get
 	res := &operations.GetWorkspaceKeysResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -248,6 +251,7 @@ func (s *workspace) GetWorkspaceLogs(ctx context.Context, request operations.Get
 	res := &operations.GetWorkspaceLogsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -312,6 +316,7 @@ func (s *workspace) GetWorkspaceMemberships(ctx context.Context, request operati
 	res := &operations.GetWorkspaceMembershipsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -376,6 +381,7 @@ func (s *workspace) GetWorkspaceSnapshots(ctx context.Context, request operation
 	res := &operations.GetWorkspaceSnapshotsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -450,6 +456,7 @@ func (s *workspace) RollbackSnapshots(ctx context.Context, request operations.Ro
 	res := &operations.RollbackSnapshotsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
@@ -524,6 +531,7 @@ func (s *workspace) UpdateWorkspaceMembership(ctx context.Context, request opera
 	res := &operations.UpdateWorkspaceMembershipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
+		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
