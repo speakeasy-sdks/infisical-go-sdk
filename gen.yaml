@@ -5,7 +5,7 @@ management:
     speakeasyVersion: 1.8.5
 generation:
     telemetryEnabled: false
-    sdkClassName: SDK
+    sdkClassName: infisical
 go:
     version: 0.4.2
     packageName: github.com/speakeasy-sdks/infisical-go-sdk
